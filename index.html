@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav class="nav">
+            <img src="./images/Insignialogo.png" alt="logo">
+            <p>Vidyo<span class="logo-dot">.</span>i</p>
+        </nav>
+        <div>
+            <img src="./images/img_screenshot_2024_03_30.png" alt="main-offer">
+        </div>
+    </header>
+
+    <!-- Pricing section -->
+    <section class="price-section">
+        <div class="price-suggestion"> 
+            <p>Suggesting an ideal plan for producing around <span class="" style="color: var(--deep_purple_A200); font-weight: 700;">125</span> clips monthly</p>
+        </div>
+        <div class="price-range-container">
+            <p>50</p>
+            <input type="range" name="subscription-price" id="price" min="50" max="250" oninput="updatePlanCard()">
+            <p>200+</p>
+        </div>
+    </section>
+    
+    <!-- Plan List -->
+    <section class="plan-list">
+        <!-- Plan card 1 -->
+        <div class="plan-card"  id="plan-card-1">
+            <div class="plan-header">
+                <h3 class="plan-type">Free</h3>
+                <p class="plan-price">USD 0 <span>/month</span></p>
+                <button class="plan-button-card">Start For Free</button>
+            </div>
+            <hr>
+            <div class="plan-content">
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>75 mins per month</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>720p render quality</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>Multi-Lingual feature </p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>Cut Magic</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan card 2 -->
+        <div class="plan-card" id="plan-card-2" >
+            <div class="plan-header">
+                <h3 class="plan-type">Essential</h3>
+                <p class="plan-price">USD 42 <span>/month</span></p>
+                <button class="plan-button-card">Choose This Plan ></button>
+            </div>
+            <hr>
+            <div class="plan-content">
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>Everything in Free plan</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>200-500 mins per month</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>1080p render quality</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>Import with integrations (Drive, Dropbox, Box)</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                    <p>Intelliclips</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan card 3 -->
+        <div class="plan-card" id="plan-card-3">
+            <div class="plan-header">
+                <div class="plan-type-container">
+                    <h3 class="plan-type">Growth</h3>
+                    <p>Recommended</p>
+                </div>
+                <p class="plan-price">USD 68 <span>/month</span></p>
+                <button class="plan-button-card">Choose This Plan ></button>
+            </div>
+            <hr id="plan-card-3-break">
+            <div class="plan-content">
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_100_02.svg" alt="check mark">
+                    <p>Everything in Essential plan</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_100_02.svg" alt="check mark">
+                    <p>200-1000 mins per month</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_100_02.svg" alt="check mark">
+                    <p>Bulk export (upto 5)</p>
+                </div>
+                <div class="plan-feature">
+                    <img src="./images/img_16px_ic_check_gray_100_02.svg" alt="check mark">
+                    <p>Bulk multi-social publishing</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan card 4 -->
+        <div class="plan-card" id="plan-card-4">
+            <div class="plan-header">
+                <h3 class="plan-type">Custom</h3>
+                <p class="plan-price">USD 80<span>/month</span></p>
+                <button class="plan-button-card">Start For Free</button>
+            </div>
+            <hr>
+            <div>
+                <div class="options-container">
+                    <p id="option-title">Select minutes</p>
+                    <select class="plan-select-option" name="Text">
+                        <option value="option1">75 mins</option>
+                        <option value="option2">200 mins</option>
+                        <option value="option3">500 mins</option>
+                        <option value="option3">1000 mins</option>
+                    </select>
+                </div>
+                <div class="plan-content">
+                    <div class="plan-feature">
+                        <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                        <p>Everything in Growth plan</p>
+                    </div>
+                    <div class="plan-feature">
+                        <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                        <p>400-1000 mins per month</p>
+                    </div>
+                    <div class="plan-feature">
+                        <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                        <p>4K render quality</p>
+                    </div>
+                    <div class="plan-feature">
+                        <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                        <p>Bulk export</p>
+                    </div>
+                    <div class="plan-feature">
+                        <img src="./images/img_16px_ic_check_gray_900.svg" alt="check mark">
+                        <p>Multiple brand kits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- View all Features of Plans Button -->
+    <section class="view-all-button-container">
+        <button class="view-all-button">View All Features  <img src="./images/Vector.png" /></button>
+    </section>
+
+    <!-- View all Features of Plans Section -->
+    <section class="view-all-container">
+        <div class="features-info-bubble">
+            <div class="inf-content">?</div>
+        </div>
+
+        <div class="container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Features</th>
+                    <th>FREE</th>
+                    <th>Essential</th>
+                    <th>Growth</th>
+                    <th>Custom</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="accordion">
+                    <th colspan="5">
+                        <span class="accordion-toggle">Core</span>
+                    </th>
+                </tr>
+                <script>
+                    const rowsName = [
+                        "Minutes per month",
+                        "Render Quality",
+                        "Import with Youtube or Computer Upload",
+                        "Import with Integrations (Drive, Dropbox, Box)",
+                        "AI Subtitles (Captions)",
+                        "Multi-lingual feature",
+                        "Chapters",
+                        "Credit Saver",
+                        "Intelliclips",
+                        "Virality Score",
+                        "Bulk export",
+                        "Multiple Aspect Ratio",
+                        "Default Templates",
+                        "Create Custom Clip",
+                        "Auto-Emoji",
+                        "Fancy Captions",
+                        "Progress bar",
+                        "Stock Media (Pexels, etc)",
+                        "Background Audio",
+                        "Custom Backgrounds",
+                        "Save Draft",
+                        "Edit Downloaded Video",
+                        "Data Retention"
+                    ]
+                    const criteria = {
+                        "FREE": 5,
+                        "Essential": 12,
+                        "Growth": 18,    
+                        "Custom": 23     
+                    };
+
+                    for (let i = 0; i < rowsName.length; i++) {
+                        const row = document.createElement('tr');
+                        row.classList.add('data-row', i % 2 === 0 ? 'even' : 'odd');
+                        row.innerHTML = `<td>${rowsName[i]}</td>
+                                        <td>${getCheckMarkHTML(i, criteria["FREE"])}</td>
+                                        <td>${getCheckMarkHTML(i, criteria["Essential"])}</td>
+                                        <td>${getCheckMarkHTML(i, criteria["Growth"])}</td>
+                                        <td>${i <= criteria["Custom"] ? '&#10004;' : "-"}</td>`;
+                        document.querySelector('tbody').appendChild(row);
+                    }
+
+                    function getCheckMarkHTML(index, markIndex) {
+                        return index < markIndex ? '&#10004;' : '-';
+                    }
+
+                </script>
+                <tr class="accordion">
+                    <th colspan="5">
+                        <span class="accordion-toggle">Brand Kit</span>
+                    </th>
+                </tr>
+                <tr class="nested-accordion">
+                    <td colspan="5"></td>
+                </tr>
+                <tr class="accordion">
+                    <th colspan="5">
+                        <span class="accordion-toggle">Socials</span>
+                    </th>
+                </tr>
+                <tr class="nested-accordion">
+                    <td colspan="5"></td>
+                </tr>
+                <tr class="accordion">
+                    <th colspan="5">
+                        <span class="accordion-toggle">Metadata</span>
+                    </th>
+                </tr>
+                <tr class="nested-accordion">
+                    <td colspan="5"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div> 
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
